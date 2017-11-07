@@ -6,6 +6,7 @@ import {
 import Title from '../components/Title';
 import SearchBox from '../components/SearchBox';
 
+//profile tab
 class ProfileSearch extends Component {
     render() {
         return (

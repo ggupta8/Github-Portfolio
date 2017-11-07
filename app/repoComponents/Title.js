@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, View, Text } from 'react-native';
 
+//displays title of page
 const Title = () => {
     const { containerStyle, imageStyle, titleStyle } = styles;
     return (

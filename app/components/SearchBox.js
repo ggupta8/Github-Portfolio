@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { TextInput, View, Button, Text } from 'react-native';
 import Result from './Result';
 
+//search box
 class SearchBox extends Component {
     constructor(props) {
         super(props);
         this.state = { user: '', data: '', loading: false };
     }
 
+    //fetch api data
     fetchData = () => {
         this.setState({ loading: true });
         const username = this.state.user;
@@ -19,13 +21,14 @@ class SearchBox extends Component {
             .catch(err => console.log(err));
     }
     
+    //if no user found
     renderResult() {
         if (this.state.data.message) {
             return (
                 <Text style={styles.notFoundStyle}>User not found</Text>
             );
         }
-        return (
+        return (    //goes to result function and returns data
             <Result 
                 name={this.state.data.name}
                 image={this.state.data.avatar_url}

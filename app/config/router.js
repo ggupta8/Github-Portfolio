@@ -7,6 +7,7 @@ import Repositories from "../screens/repositories";
 import Followers from "../screens/followers";
 import Following from "../screens/following";
 
+//tabs on top of screen
 export const Tabs = TabNavigator({
 	Profile: {
 		screen: Profile,

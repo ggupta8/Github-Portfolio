@@ -1,8 +1,7 @@
 import React from 'react';
 import { Image, View, Text } from 'react-native';
 
-//var image = require('../img/GitHub-Mark.png');
-
+//screen's title above search box
 const Title = () => {
     const { containerStyle, imageStyle, titleStyle } = styles;
     return (

@@ -7,6 +7,7 @@ class Result extends Component {
         username ? Linking.openURL(`https://github.com/${username}`) : <View />;
     }
 
+    //displays user search results
     render() {
         const { containerStyle, textStyle, imageStyle } = styles;
         return (

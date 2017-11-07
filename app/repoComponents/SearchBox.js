@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import { TextInput, View, Button, Text, FlatList, Linking } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
+//outputs results of search box
 class SearchBox extends Component {
     constructor(props) {
         super(props);
         this.state = { repos: '', all: [], data: [], loading: false };
     }
 
-
+    //opens up repository links
     goToLink = (url) => {
          url ? Linking.openURL(url) : <View />;
     }
 
+    //gets api links
     fetchData = () => {
         this.setState({ loading: true });
         const repos = this.state.repos;
@@ -24,10 +26,11 @@ class SearchBox extends Component {
             .catch(err => console.log(err));
     }
     
+    //returns repository search results
     renderResult() {
-        if (this.state.all.total_count == 0) {
+        if (this.state.all.total_count == '0') {
             return (
-                <Text style={textStyle}> The repository wasnt found </Text>
+                <Text style={styles.notFoundStyle}> The repository wasnt found </Text>
             );
         }
         return ( 

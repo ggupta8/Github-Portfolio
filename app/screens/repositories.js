@@ -6,6 +6,7 @@ import {
 import Title from '../repoComponents/Title';
 import SearchBox from '../repoComponents/SearchBox';
 
+//search repositories page
 class RepoSearch extends Component {
     render() {
         return (
